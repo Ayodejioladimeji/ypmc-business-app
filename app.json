@@ -1,0 +1,122 @@
+{
+  "expo": {
+    "name": "YPMC Business",
+    "slug": "ypmc-partners",
+    "version": "1.0.8",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "ypmc-business",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "ios": {
+      "infoPlist": {
+        "OneSignalAppId": "c0aac35d-b681-4a59-b53b-40a545c01bc1",
+        "photosPermission": "YPMC needs access to your Camera while using the app to take pictures for your profile",
+        "NSPhotoLibraryUsageDescription": "YPMC needs access to your Camera while using the app to take pictures for your profile",
+        "NSLocationWhenInUseUsageDescription": "YPMC needs location access to enhance real-time navigation and improve delivery accuracy.",
+        "NSLocationAlwaysUsageDescription": "YPMC needs location access to enhance real-time navigation and improve delivery accuracy.",
+        "NSCameraUsageDescription": "YPMC needs access to your Camera while using the app to take pictures for your profile.",
+        "UIBackgroundModes": ["fetch", "remote-notification"],
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocalNetworkUsageDescription": "This app requires access to the local network to check connectivity status.",
+        "NSAllowsArbitraryLoads": true
+      },
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyC1vp3MApL7DRjIceY-W0oQ8Ud7shMpxIQ"
+      },
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.ypmc.partners",
+      "buildNumber": "1",
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.com.ypmc.partners",
+          "group.com.ypmc.partners"
+        ]
+      }
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC1vp3MApL7DRjIceY-W0oQ8Ud7shMpxIQ"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ],
+      "package": "com.ypmc.partners",
+      "versionCode": 1
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow ${PRODUCT_NAME} to use your Camera",
+          "NSPhotoLibraryUsageDescription": "Allow ${PRODUCT_NAME} to use your Camera"
+        }
+      ],
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "targetSdkVersion": 35
+          }
+        }
+      ],
+      "expo-router"
+    ],
+    "newArchEnabled": true,
+    "extra": {
+      "oneSignalAppId": "c0aac35d-b681-4a59-b53b-40a545c01bc1",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a68872c9-4995-4b2a-9b6d-9cc917be854e",
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "OneSignalNotificationServiceExtension",
+                  "bundleIdentifier": "com.ypmc.partners.OneSignalNotificationServiceExtension",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.com.ypmc.partners.onesignal"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "owner": "ypm_community"
+  }
+}
